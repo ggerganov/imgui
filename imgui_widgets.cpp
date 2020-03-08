@@ -739,13 +739,13 @@ bool ImGui::CloseButton(ImGuiID id, const ImVec2& pos)//, float size)
     ImVec2 center = bb.GetCenter();
     if (hovered) {
         //window->DrawList->AddCircleFilled(center, ImMax(2.0f, g.FontSize * 0.5f + 1.0f), col, 12);
-        window->DrawList->AddCircleFilled(center + ImVec2(1.0, 0), 0.1f, col, 12);
+        window->DrawList->AddCircleFilled(center + ImVec2(0.0, 0), 0.1f, col, 12);
     }
 
     float cross_extent = g.FontSize * 0.5f * 0.7071f - 1.0f;
     ImU32 cross_col = GetColorU32(ImGuiCol_Text);
     center -= ImVec2(0.5f, 0.5f);
-    window->DrawList->AddText(center + ImVec2(-1.0,-cross_extent), cross_col, "[X]");
+    window->DrawList->AddText(center + ImVec2(-2.0,-cross_extent), cross_col, "[X]");
     //window->DrawList->AddLine(center + ImVec2(+cross_extent,+cross_extent), center + ImVec2(-cross_extent,-cross_extent), cross_col, 1.0f);
     //window->DrawList->AddLine(center + ImVec2(+cross_extent,-cross_extent), center + ImVec2(-cross_extent,+cross_extent), cross_col, 1.0f);
 
